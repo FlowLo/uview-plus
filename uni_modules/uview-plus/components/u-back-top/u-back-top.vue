@@ -51,7 +51,9 @@
 	 */
 	export default {
 		name: 'u-back-top',
-		mixins: [uni.$u.mpMixin, uni.$u.mixin,props],
+		// mixins: [uni.$u.mpMixin, uni.$u.mixin,props],
+    // 使用uni.$u app端会导致找不到mpMixin，mixin
+    mixins: [mpMixin, mixin,props],
 		computed: {
 			backTopStyle() {
 				// 动画组件样式
